@@ -25,8 +25,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "php-cs-fixer.fix",
-				"title": "php-cs-fixer: fix this file",
+				"command": "docker-vscode-php-cs-fixer.fix",
+				"title": "docker-vscode-php-cs-fixer: fix this file",
 				"when": "!inOutput && editorFocus && editorLangId == php"
 			}
 		],
@@ -34,16 +34,16 @@
 			"title": "PHP CS Fixer Configuration options",
 			"type": "object",
 			"properties": {
-				"php-cs-fixer.executablePath": {
+				"docker-vscode-php-cs-fixer.executablePath": {
 					"type": "string",
-					"default": "php-cs-fixer",
-					"description": "Points to the php-cs-fixer exectuable, eg: win: php-cs-fixer.bat, other: php-cs-fixer; or points to php-cs-fixer.phar path, eg: /full/path/of/php-cs-fixer.phar"
+					"default": "docker-vscode-php-cs-fixer",
+					"description": "Points to the docker-vscode-php-cs-fixer exectuable, eg: win: docker-vscode-php-cs-fixer.bat, other: docker-vscode-php-cs-fixer; or points to docker-vscode-php-cs-fixer.phar path, eg: /full/path/of/docker-vscode-php-cs-fixer.phar"
 				},
-				"php-cs-fixer.executablePathWindows": {
+				"docker-vscode-php-cs-fixer.executablePathWindows": {
 					"type": "string",
-					"description": "Points to the php-cs-fixer exectuable on Windows environments, eg: php-cs-fixer.bat. Useful if you are sharing settings among different environments."
+					"description": "Points to the docker-vscode-php-cs-fixer exectuable on Windows environments, eg: docker-vscode-php-cs-fixer.bat. Useful if you are sharing settings among different environments."
 				},
-				"php-cs-fixer.rules": {
+				"docker-vscode-php-cs-fixer.rules": {
 					"type": [
 						"string",
 						"object"
@@ -51,37 +51,37 @@
 					"default": "@PSR2",
 					"description": "PHP CS Fixer level setting (@PSR1, @PSR2, @Symfony). Support json formatted value. @see: https://github.com/FriendsOfPHP/PHP-CS-Fixer"
 				},
-				"php-cs-fixer.config": {
+				"docker-vscode-php-cs-fixer.config": {
 					"type": "string",
 					"default": ".php_cs",
 					"description": "config file(.php_cs) can place in workspace root folder or .vscode folder or any other folder(full path)"
 				},
-				"php-cs-fixer.onsave": {
+				"docker-vscode-php-cs-fixer.onsave": {
 					"type": "boolean",
 					"default": false,
 					"description": "Execute PHP CS Fixer on save"
 				},
-				"php-cs-fixer.autoFixByBracket": {
+				"docker-vscode-php-cs-fixer.autoFixByBracket": {
 					"type": "boolean",
 					"default": true,
 					"description": "when press down the key } auto fix the code in the brackets {}"
 				},
-				"php-cs-fixer.autoFixBySemicolon": {
+				"docker-vscode-php-cs-fixer.autoFixBySemicolon": {
 					"type": "boolean",
 					"default": false,
 					"description": "when press down the key ; auto fix the code at the current line"
 				},
-				"php-cs-fixer.formatHtml": {
+				"docker-vscode-php-cs-fixer.formatHtml": {
 					"type": "boolean",
 					"default": false,
 					"description": "whether formatting html at the same time"
 				},
-				"php-cs-fixer.documentFormattingProvider": {
+				"docker-vscode-php-cs-fixer.documentFormattingProvider": {
 					"type": "boolean",
 					"default": true,
 					"description": "register php document formatting provider, right mouse-click context menu, show as 'Format Document', after changing this option you should restart your editor."
 				},
-				"php-cs-fixer.allowRisky": {
+				"docker-vscode-php-cs-fixer.allowRisky": {
 					"type": "boolean",
 					"default": false,
 					"description": "Are risky fixers allowed"

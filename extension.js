@@ -23,11 +23,11 @@ class DockerVSCodePHPCSFixer {
     }
 
     loadSettings() {
-        let config = workspace.getConfiguration('php-cs-fixer');
+        let config = workspace.getConfiguration('docker-vscode-php-cs-fixer');
         this.onsave = config.get('onsave', false);
         this.autoFixByBracket = config.get('autoFixByBracket', true);
         this.autoFixBySemicolon = config.get('autoFixBySemicolon', false);
-        this.executablePath = config.get('executablePath', process.platform === "win32" ? 'php-cs-fixer.bat' : 'php-cs-fixer');
+        this.executablePath = config.get('executablePath', process.platform === "win32" ? 'php-cs-fixer.bat' : 'php-cs-fixer-vscode');
         if (process.platform == "win32" && config.has('executablePathWindows') && config.get('executablePathWindows').length > 0) {
             this.executablePath = config.get('executablePathWindows');
         }
@@ -326,7 +326,7 @@ exports.activate = (context) => {
         }
     }));
 
-    context.subscriptions.push(commands.registerTextEditorCommand('php-cs-fixer.fix', (textEditor) => {
+    context.subscriptions.push(commands.registerTextEditorCommand('docker-vscode-php-cs-fixer.fix', (textEditor) => {
         if (textEditor.document.languageId == 'php') {
             commands.executeCommand("editor.action.formatDocument");
         }
